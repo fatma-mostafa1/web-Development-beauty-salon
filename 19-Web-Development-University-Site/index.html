@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Salon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#" onclick="checkAccess('home')">Home</a></li>
+            <li><a href="#" onclick="checkAccess('about-us')">About Us</a></li>
+            <li><a href="#" onclick="checkAccess('admin')">Admin</a></li>
+            <li><a href="#" onclick="checkAccess('login')">Login</a></li>
+            <li><a href="#" onclick="checkAccess('register')">Register</a></li>
+            <li><a href="#" onclick="checkAccess('contact-us')">Contact Us</a></li>
+            <li><a href="#" onclick="handleLogout()">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sections -->
+    <section id="home" style="display: none;">
+        <h1 style="font-size:40px;"> Beauty Lounge</h1>
+        <h2 style="font-size:20px;">
+            Where beauty meets relaxation, Our salon offers a luxurious retreat designed to help you look and feel your best.
+            From expert haircuts and coloring to rejuvenating facials and spa treatments, we provide personalized services
+            tailored to enhance your natural beauty. Our skilled professionals use the highest quality products in a soothing
+            environment, ensuring you leave refreshed, radiant, and confident. Discover the ultimate beauty experience—your
+            journey to self-care starts here.
+        </h2>
+
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">Spa</div>
+                <img src="https://www.mowanaspa.co.za/images/easyblog_articles/24/2b-at-home-spa.jpg" style="width:100%" alt="Luxury Spa Image">
+                <div class="text">Our luxury spa hotels offer an exclusive four- and five-star experience, which includes the spa facilities you can expect to enjoy.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">Nails</div>
+                <img src="https://www.greentoestucson.com/wp-content/uploads/2021/06/Nail-Salons-Tucson.jpeg" style="width:100%" alt="Nail Service Image">
+                <div class="text">Depending on what you want, a simple manicure, pedicure, or acrylics, dip nails or gels, you can expect excellent service from your nail technician.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">Hair</div>
+                <img src="https://img1.wsimg.com/isteam/ip/fa580673-4d55-49a6-b6ee-63b20b123179/IMG_1777.JPG/:/cr=t:0%25,l:5.67%25,w:88.67%25,h:100%25/rs=w:600,h:451.12781954887214,cg:true" style="width:100%" alt="Hair Service Image">
+                <div class="text">We provide clients with a variety of hair-related services including haircuts, styling, chemical treatments, and more.</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <section id="about-us" style="display: none;">
+        <h1 style="font-size:40px;color: #720b50;">About Us</h1>
+        <div class="content">
+            <h2>Our Story</h2>
+            <p>Our committed and competent team is here to help keep your hair, nails, skin, and body healthy and beautiful. In addition to our regular beauty services such as pedicures, manicures, and hair services, we will continue to perfect our skills and stay educated on all the latest styles. Enjoy our wide range of services in a cozy and luxurious environment. We look forward to serving you!</p>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="https://imgs.search.brave.com/2gX2DW0fwq7T2e32yBLYgU-WvGueG7D_osv6LbMQlB0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cHJvZC53ZWJzaXRl/LWZpbGVzLmNvbS81/ZTY0MjIxMmUxMjll/MTFjN2FjOTFmMWIv/NjQ3Zjk5M2E3MDA1/OGM1ODk3ODJmNjU5/X25haWwlMjB0ZWNo/JTIwdGh1bWIucG5n" alt="Jayda - Nail Technician" style="width:100%">
+                <div class="container">
+                    <h2>Jayda</h2>
+                    <p class="title">Nail Technician</p>
+                    <p>Jayda is a trained professional specializing in the care and enhancement of nails, including manicures, pedicures, and various types of nail art. They play a crucial role in the beauty and personal care industry, focusing on the health and appearance of clients' nails.</p>
+                    <p>jayda@example.com</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="https://imgs.search.brave.com/lAj71YylHbl2Qeaezcw59lMDwIbiu7tjoy1yk25HFD0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI5/NzgyMzExMi9waG90/by9tYWtldXAtYXJ0/aXN0LWF0LXdvcmst/aW4tYS1zdHVkaW8u/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PXNaWS1uSzltRFRD/TWNQYlprQkdYZnFU/N1lLQ2FodGlBY1hn/b21vSkRTdUk9" alt="Ross - Makeup Artist" style="width:100%">
+                <div class="container">
+                    <h2>Ross</h2>
+                    <p class="title">Makeup Artist</p>
+                    <p>Ross is a professional who specializes in applying makeup and other cosmetic products to enhance or alter a person's appearance. Their work spans a wide range of industries, including fashion, film, television, theater, photography, and special events like weddings and proms. Makeup artists use their skills to create looks that range from natural beauty enhancements to dramatic, artistic effects.</p>
+                    <p>ross@example.com</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="https://imgs.search.brave.com/xecC-CFO6KM2n5HRWV4EnD2dnv5wYJoWrOg2B24vJZY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy85/LzlkL0hhbGxvX29m/X0ZhbW91c19CYXJi/ZXJfaW5fMTkxMl8o/U2Fsb21fRXZlbnQp/LmpwZw" alt="Barber Team" style="width:100%">
+                <div class="container">
+                    <h2>Yassin</h2>
+                    <p class="title">Barber</p>
+                    <p>Yassin is a skilled professional who specializes in cutting, styling, and grooming men's hair, as well as providing services like beard trimming and shaving. Barbers are often experts in traditional and modern men's haircuts, and they play a vital role in helping clients maintain their appearance and personal style.</p>
+                    <p>yassin@example.com</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="admin" style="display: none;">
+        <h1>Admin Section</h1>
+        <p>This section is for admin use only.</p>
+    </section>
+
+    <section id="login" style="display: none;">
+        <h1>Login</h1>
+        <form>
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <section id="register" style="display: none;">
+        <h1>Register</h1>
+        <form>
+            <label for="new-username">Username:</label><br>
+            <input type="text" id="new-username" name="new-username" required><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="new-password">Password:</label><br>
+            <input type="password" id="new-password" name="new-password" required><br><br>
+            <input type="submit" value="Register">
+        </form>
+    </section>
+
+    <section id="contact-us" style="display: none;">
+        <h1>Contact Us</h1>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" required></textarea><br><br>
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

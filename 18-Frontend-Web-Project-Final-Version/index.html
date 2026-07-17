@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Salon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#" onclick="checkAccess('home')">Home</a></li>
+            <li><a href="#" onclick="checkAccess('about-us')">About Us</a></li>
+            <li id="admin-nav" style="display: none;"><a href="#" onclick="checkAccess('admin')">Admin</a></li>
+            <li><a href="#" onclick="checkAccess('login')">Login</a></li>
+            <li><a href="#" onclick="checkAccess('register')">Register</a></li>
+            <li><a href="#" onclick="checkAccess('contact-us')">Contact Us</a></li>
+            <li><a href="#" onclick="handleLogout()">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sections -->
+    <section id="home" style="display: none;">
+        <h1 style="font-size:40px;">La Luna Beauty Clinic</h1>
+        <h2 style="font-size:20px;"> Where beauty meets relaxation, Our salon offers a luxurious retreat designed to help you look and feel your best. From expert haircuts and coloring to rejuvenating facials and spa treatments, we provide personalized services tailored to enhance your natural beauty. Our skilled professionals use the highest quality products in a soothing environment, ensuring you leave refreshed, radiant, and confident. Discover the ultimate beauty experience—your journey to self-care starts here.</h2>
+      
+        <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">Nails</div>
+                <img src="https://i.pinimg.com/474x/d4/35/34/d43534ceb302e791bc9864ee2989c609.jpg" style="width: 800px; height: 650px;">
+                <div class="text">Depending on what you want, a simple manicure, pedicure, or acrylics, dip nails, or gels. You can expect excellent service from your nail technician. They would massage your hands and fingers and cut and shape your nails, push back your cuticles, and file and buff your fingernails.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">Spa</div>
+                <img src="https://i.pinimg.com/474x/63/18/d7/6318d7bcf81a61ed253c2fb2c2e21988.jpg" style="width: 800px; height: 650px;">
+                <div class="text">Our luxury spa hotels offer an exclusive four- and five-star experience, which includes the spa facilities you can expect to enjoy. Depending on the venue and package you choose, your luxury spa day or overnight spa break might feature access to a wonderful rooftop infinity pool, a charming spa garden, or a welcoming outdoor hot tub.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">Hair</div>
+                <img src="https://i.pinimg.com/474x/6e/48/10/6e4810df8f920d3402c8558bfb441644.jpg" style="width: 800px; height: 650px;">
+                <div class="text">We provide clients with a variety of hair-related services. Haircutting, regular and formal styling, chemical treatments (color, highlights, perms, and keratin treatments), hair and scalp treatments, and beard and mustache shaping are all included.</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <!-- Menu Button -->
+<button id="menuButton" style="position: absolute; top: 20px; left: 20px;background-color: #f1e1c6 ;color: #6D4A45;">Menu</button>
+
+<!-- Hidden Table -->
+<div id="menuTable" style="display: none; position: absolute;font-family: 'la jour'; top: 60px; left: 20px; background-color: #f1e1c6; border: 1px solid #ccc; padding: 10px;">
+    <table>
+        <tr>
+            <th>Service</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Manicure</td>
+            <td>Includes cut, shape, and polish of nails.</td>
+            <td>$20</td>
+        </tr>
+        <tr>
+            <td>Spa Treatment</td>
+            <td>Luxurious spa treatments with access to spa facilities.</td>
+            <td>$150</td>
+        </tr>
+        <tr>
+            <td>Haircut</td>
+            <td>Professional haircut and styling.</td>
+            <td>$40</td>
+        </tr>
+
+    </table>
+</div>
+
+        
+    </section>
+
+    <section id="about-us" style="display: none;">
+        <h2>About Us</h2>
+      
+        <div class="slide-img">
+            <table width="100%" boarder="0">
+                <tr>
+                    <td style="border: 0;"> 
+            <div class="responsive">
+                <div class="gallery">
+                  <a target="_blank" href="C:\Users\shade\OneDrive\Desktop\web\bs1.jpg">
+                    <img src="C:\Users\shade\OneDrive\Desktop\web\bs1.jpg"style="width:100%" >
+                  </a>
+                  <div class="desc">Get the perfect haircut and style for you</div>
+                </div>
+              </div>
+            </td> 
+              <td style="border: 0;"> 
+              <div class="responsive">
+                <div class="gallery">
+                  <a target="_blank" href="C:\Users\shade\OneDrive\Desktop\web\bs2.jpg">
+                    <img src="C:\Users\shade\OneDrive\Desktop\web\bs2.jpg"style="width:100%" >
+                  </a>
+                  <div class="desc">Visit us and experience the difference.</div>               
+                </div>
+              </div>
+            </td> 
+              <td style="border: 0;"> 
+              <div class="responsive">
+                <div class="gallery">
+                  <a target="_blank" href="C:\Users\shade\OneDrive\Desktop\web\bs3.jpg">
+                    <img src="C:\Users\shade\OneDrive\Desktop\web\bs3.jpg" style="width:100%">
+                  </a>
+                  <div class="desc">Let us create your dream look <br><br></div> 
+                </div>
+              </div>
+            </td> 
+            </tr>
+            </table>
+           
+    </div>
+  
+
+  <div class="content">
+    <br>
+    <h2>Our Story</h2>
+    <p>Our committed and competent team is here to help keep your hair, nails, skin, and body healthy and
+         beautiful. In addition to our regular beauty services such as pedicures, manicures, and hair services we 
+         will continue to perfect our skills and keep educated on all the latest styles. Enjoy our wide range of
+     services in a cozy and luxurious environment. We look forward to serving you!</p>
+
+   <p>We are a premier beauty salon offering a variety of services to make you look and feel beautiful.</p>
+   <br>
+   </div>
+   <h2>Our Team</h2>
+   <div class="slide-img">
+   <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="c:\Users\shade\OneDrive\Desktop\web\bs11.jpg" alt="Jane" style="width:100%">
+        <div class="container">
+          <h2>Jane</h2>
+          <p class="title">Makeup artist</p>
+          <p>work to match a look to a customer request  </p>
+          <p>jane@gmail.com</p>
+          <p><button class="button" onclick="checkAccess('contact-us')">Contact</button></p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="card">
+        <img src="C:\Users\shade\OneDrive\Desktop\web\bs22.jpg" alt="Emma" style="width:100%">
+        <div class="container">
+          <h2>Emma</h2>
+          <p class="title">Nail technician</p>
+          <p>deliver a consistently high-quality service to customers</p>
+          <p>emma@gmail.com</p>
+          <p><button class="button" onclick="checkAccess('contact-us')">Contact</button></p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="card">
+        <img src="C:\Users\shade\OneDrive\Desktop\web\bs33.jpg" alt="Sarah" style="width:100%">
+        <div class="container">
+          <h2>Sarah</h2>
+          <p class="title">Hairdresser</p>
+          <p>provide a range of hair-related services to customers </p>
+          <p>sarah@gmail.com</p>
+          <p><button class="button" onclick="checkAccess('contact-us')">Contact</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <br>
+
+
+
+<br>
+<footer>  
+<p>&copy;  
+2024 Your Beauty Salon 
+</p>
+</footer>
+
+    </section>
+
+    
+
+
+
+    <section id="admin" style="display: none;">
+        <h2>Admin Page</h2>
+        <p>Manage Bookings Here.<br><br></p>
+        <table id="bookingTable">
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Payment Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="bookingTableContent">
+
+                <tr>
+                    <td>001</td>
+                    <td>29-9-2024</td>
+                    <td>Haircut and Styling</td>
+                    <td>Pending</td>
+                    <td>
+                        <button onclick="removeBooking(this)">
+                            <img src="./images/delete-icon.png" alt="Remove" style="width: 20px; height: 20px;">
+                        </button>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td>002</td>
+                    <td>01-10-2024</td>
+                    <td>Manicure</td>
+                    <td>Completed</td>
+                    <td>
+                        <button onclick="removeBooking(this)">
+                            <img src="./images/delete-icon.png" alt="Remove" style="width: 20px; height: 20px;">
+                        </button>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td>003</td>
+                    <td>03-10-2024</td>
+                    <td>Facial Treatment</td>
+                    <td>Cancelled</td>
+                    <td>
+                        <button onclick="removeBooking(this)">
+                            <img src="./images/delete-icon.png" alt="Remove" style="width: 20px; height: 20px;">
+                        </button>
+                    </td>
+                </tr>
+
+            </tbody>
+
+
+            <!-- section if admin wants to add new booking -->
+            <tfoot>
+                <tr>
+                    <td><input type="text" id="newId" placeholder="ID"></td>
+                    <td><input type="text" id="newDate" placeholder="Date (DD-MM-YYYY)"></td>
+                    <td><input type="text" id="newDescription" placeholder="Description"></td>
+                    <td>
+                        <select id="newStatus">
+                            <option value="Pending">Pending</option>
+                            <option value="Completed">Completed</option>
+                            <option value="Cancelled">Cancelled</option>
+                        </select>
+                    </td>
+                    <td><button onclick="addBooking()">Add</button></td>
+                </tr>
+            </tfoot>
+
+
+        </table>
+    </section>
+
+    <section id="login">
+        <h2>Login</h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <section id="register" style="display: none;">
+        <h2>Register</h2>
+        <form>
+            <label for="regUsername">Username:</label>
+            <input type="text" id="regUsername" required>
+            <label for="regEmail">Email:</label>
+            <input type="email" id="regEmail" required>
+            <label for="regPassword">Password:</label>
+            <input type="password" id="regPassword" required>
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <section id="logout" style="display: none;">
+        <h2>You've been logged out. Thank you for visiting!</h2>
+    </section>
+
+    <section id="contact-us" style="display: none;">
+        <div class="contact_us">
+            <div class="responsive-container-block bigContainer">
+                <div class="responsive-container-block Container">
+                    <div class="responsive-cell-block wk-desk-5 wk-ipadp-4 wk-tab-12 wk-mobile-12">
+                        <img class="mainImg" src="https://i.pinimg.com/736x/3a/8a/f4/3a8af48c3d49519a13b22cbe7b41a558.jpg">
+                    </div>
+                    <div class="responsive-cell-block wk-desk-7 wk-ipadp-8 wk-tab-12 wk-mobile-12">
+                        <p class="text-blk heading">Contact Us</p>
+                        <form class="formTable" id="izml">
+                            <div class="firstRow">
+                                <div class="fullNameArea">
+                                    <p class="cardHead">Full Name</p>
+                                    <input class="fullName" id="fullName" name="fullName" type="text">
+                                </div>
+                                <div class="emailArea">
+                                    <p class="cardHead">Email Address</p>
+                                    <input class="email" id="email" name="email" type="text">
+                                </div>
+                            </div>
+                            <div class="messageArea">
+                                <p class="cardHead">Message</p>
+                                <textarea class="message" cols="30" id="message" name="message" rows="10"></textarea>
+                            </div>
+                            <a class="submit" href="#" id="w-c-s-bgc_p-1-dm-id-4" onclick="sendMessage()">Send Message</a>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+            <h2>Our Branches</h2>
+            <p>We currently operate in 3 locations:</p>
+            <ul>
+                <li>Main Branch: 123 Zamalek </li>
+                <li>Branch 2: 232 Maadi</li>
+                <li>Branch 3: 722 Shorouk</li>
+            </ul><br>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
